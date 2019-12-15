@@ -4,12 +4,10 @@
     class="g-button"
     :class="{[`icon-${iconPosition}`]:true}"
   >
-    <svg
+    <g-icon
       v-if="icon"
-      class="icon"
-    >
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+      :name='icon'
+    ></g-icon>
     <div class="content">
       <slot></slot>
     </div>
