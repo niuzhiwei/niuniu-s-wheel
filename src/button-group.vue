@@ -7,11 +7,16 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
-
-  components: {}
+  mounted() {
+    for (let node of this.$el.children) {
+      let name = node.nodeName.toLowerCase();
+      if (name !== "button") {
+        console.warn(
+          `g-button-group的子元素应该全部为button,但是你写的是${name}`
+        );
+      }
+    }
+  }
 };
 </script>
 <style lang='scss'>
