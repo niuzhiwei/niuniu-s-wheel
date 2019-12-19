@@ -3,14 +3,16 @@
   <button
     class="g-button"
     :class="{[`icon-${iconPosition}`]:true}"
+    @click="$emit('click')"
   >
     <g-icon
       class="icon"
-      v-if="icon"
+      v-if="icon && !loading"
       :name='icon'
     ></g-icon>
     <g-icon
-      class="loading"
+      v-if="loading"
+      class="icon loading"
       name='loading'
     ></g-icon>
     <div class="content">
@@ -23,6 +25,10 @@
 export default {
   props: {
     icon: { type: String },
+    loading: {
+      type: Boolean,
+      default: false
+    },
     iconPosition: {
       type: String,
       default: "left",
