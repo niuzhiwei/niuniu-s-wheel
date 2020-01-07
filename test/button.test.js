@@ -1,27 +1,15 @@
-import Vue from 'vue'
-import Button from './button'
-import Icon from './icon'
-import ButtonGroup from './button-group'
-Vue.component('g-button', Button)
-Vue.component('g-icon', Icon)
-Vue.component('g-button-group', ButtonGroup)
-new Vue({
-  el: '#app',
-  data: {
-    loading1: false,
-    loading2: true
-  }
-})
-
-//单元测试
-
-import chai from 'chai'
-import spies from 'chai-spies'
-chai.use(spies)
-
 const expect = chai.expect
-try {
-  {
+import Vue from 'vue'
+import Button from '../src/button'
+
+Vue.config.productionTip = false
+Vue.config.devtools = false
+
+describe('Button', () => {
+  it('存在.', () => {
+    expect(Button).to.be.ok
+  })
+  it('可以设置icon.', () => {
     //测试按钮含有icon
     const Constructor = Vue.extend(Button)
     const button = new Constructor({
@@ -34,8 +22,8 @@ try {
     expect(useElement.getAttribute('xlink:href')).to.eq('#i-thumbs-up')
     button.$el.remove()
     button.$destroy()
-  }
-  {
+  })
+  it('可以设置loading.', () => {
     const Constructor = Vue.extend(Button)
     const button = new Constructor({
       propsData: {
@@ -48,8 +36,8 @@ try {
     expect(useElement.getAttribute('xlink:href')).to.eq('#i-loading')
     button.$el.remove()
     button.$destroy()
-  }
-  {
+  })
+  it('icon默认order是1.', () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
     const Constructor = Vue.extend(Button)
@@ -64,8 +52,8 @@ try {
     expect(order).to.eq('1')
     button.$el.remove()
     button.$destroy()
-  }
-  {
+  })
+  it('可以设置position.', () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
     const Constructor = Vue.extend(Button)
@@ -81,27 +69,18 @@ try {
     expect(order).to.eq('2')
     button.$el.remove()
     button.$destroy()
-  }
-  {
-    //函数mock
+  })
+  it('点击button触发click事件.', () => {
     const Constructor = Vue.extend(Button)
-    const gButton = new Constructor({
+    const button = new Constructor({
       propsData: {
         icon: 'thumbs-up'
       }
     })
-    gButton.$mount()
-    let spy = chai.spy(function() {})
-    gButton.$on('click', spy)
-    let button = gButton.$el
-    button.click()
-    expect(spy).to.have.been.called()
-  }
-} catch (error) {
-  window.errors = [error]
-} finally {
-  window.errors &&
-    window.errors.forEach(error => {
-      console.log(error.message)
-    })
-}
+    button.$mount()
+    const callback = sinon.fake()
+    button.$on('click', callback)
+    button.$el.click()
+    expect(callback).to.have.been.called
+  })
+})
