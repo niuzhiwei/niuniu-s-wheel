@@ -40,12 +40,6 @@ IE 15 及以上浏览器都支持此样式。
    npm i --save niuniu-s-wheel
    ```
 3. 引入wheel
-   
-4. 引入 svg symbols
-   ```
-   <script src="//at.alicdn.com/t/font_1564410_94z3u8pkckb.js"></script>
-   ```
-
 
 
 ## 文档
