@@ -34,11 +34,13 @@
             }
     ```
 IE 15 及以上浏览器都支持此样式。
+
 2. 安装wheel
 
    ```
    npm i --save niuniu-s-wheel
    ```
+   
 3. 引入wheel
 
 
