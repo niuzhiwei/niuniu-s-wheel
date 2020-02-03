@@ -36,6 +36,10 @@
 
 <body>
     <div id="app">
+        <g-input value='张三' readonly></g-input>
+        <g-input value='王二' disabled></g-input>
+        <g-input value='猪猪' error='姓名不能少于两个字'></g-input>
+        <div style="padding: 20px;"></div>
         <g-button :loading='loading1' @click='loading1=!loading1' icon='thumbs-up'>
             猪猪
         </g-button>
@@ -50,10 +54,8 @@
                 下一页
             </g-button>
         </g-button-group>
-        <div id="test"></div>
     </div>
     <script src="./src/app.js"></script>
-    <!-- <script src="//at.alicdn.com/t/font_1564410_94z3u8pkckb.js"></script> -->
 </body>
 
 </html>
