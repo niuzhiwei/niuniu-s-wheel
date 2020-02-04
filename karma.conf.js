@@ -23,7 +23,7 @@ module.exports = function(config) {
     //  使用测试结果报告者
     //  可能的值: "dots", "progress"
     //  可用的报告者：https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'junit'],
 
     // 服务端口号
     port: 9876,

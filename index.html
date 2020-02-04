@@ -39,7 +39,9 @@
         <g-input value='张三' readonly></g-input>
         <g-input value='王二' disabled></g-input>
         <g-input value='猪猪' error='姓名不能少于两个字'></g-input>
-        <g-input value='牛牛' @change='inputChange'></g-input>
+        <g-input v-model='message'></g-input>
+        <p>{{message}}</p>
+        <button @click='message+=1'>按钮</button>
         <div style="padding: 20px;"></div>
         <g-button :loading='loading1' @click='loading1=!loading1' icon='thumbs-up'>
             猪猪

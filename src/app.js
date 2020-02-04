@@ -11,10 +11,11 @@ new Vue({
   el: '#app',
   data: {
     loading1: false,
-    loading2: true
+    loading2: true,
+    message: '测试input'
   },
-  methods:{
-    inputChange(e){
+  methods: {
+    inputChange(e) {
       console.log(e)
     }
   }
