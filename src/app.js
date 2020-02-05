@@ -40,7 +40,7 @@ new Vue({
     },
     showToast() {
       this.$toast('很多文字很多文字', {
-        position: 'bottom',
+        position: 'middle',
         enableHtml: false,
         autoClose: false,
         closeButton: {
