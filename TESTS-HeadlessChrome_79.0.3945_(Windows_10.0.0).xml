@@ -1,45 +1,42 @@
 <?xml version="1.0"?>
-<testsuite name="HeadlessChrome 79.0.3945 (Windows 10.0.0)" package="" timestamp="2020-02-06T03:02:57" id="0" hostname="LAPTOP-8IQGIGE7" tests="27" errors="0" failures="0" time="2.573">
+<testsuite name="HeadlessChrome 79.0.3945 (Windows 10.0.0)" package="" timestamp="2020-02-06T13:23:05" id="0" hostname="LAPTOP-8IQGIGE7" tests="32" errors="0" failures="0" time="2.548">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/79.0.3945.130 Safari/537.36"/>
   </properties>
-  <testcase name="Button 存在." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button 可以设置icon." time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button 可以设置loading." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button icon默认order是1." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button 可以设置icon." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button 可以设置loading." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button icon默认order是1." time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
   <testcase name="Button 可以设置position." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
   <testcase name="Button 点击button触发click事件." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
   <testcase name="Col 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col"/>
   <testcase name="Col props 接收span" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
   <testcase name="Col props 接收offset" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收pc" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
   <testcase name="Col props 接收pc" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
-  <testcase name="Col props 接收pc" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
-  <testcase name="Col props 接收narrowPc" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收narrowPc" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
   <testcase name="Col props 接收widePc" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
   <testcase name="Input 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input"/>
-  <testcase name="Input props 接收value" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
-  <testcase name="Input props 接收disabled" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
-  <testcase name="Input props 接收readonly" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
+  <testcase name="Input props 接收value" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
+  <testcase name="Input props 接收disabled" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
+  <testcase name="Input props 接收readonly" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
   <testcase name="Input props 接收error" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
-  <testcase name="Input 事件 支持change/input/focus/blur事件" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input 事件"/>
+  <testcase name="Input 事件 支持change/input/focus/blur事件" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input 事件"/>
   <testcase name="Row 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row"/>
-  <testcase name="Row props 接收gutter" time="0.007" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
-  <testcase name="Row props 接收align" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
+  <testcase name="Row props 接收gutter" time="0.008" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
+  <testcase name="Row props 接收align" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
+  <testcase name="TabsItem 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).TabsItem"/>
+  <testcase name="TabsItem 接受name props" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).TabsItem"/>
+  <testcase name="TabsItem 接受disabled props" time="0.004" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).TabsItem"/>
+  <testcase name="Tabs 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Tabs"/>
+  <testcase name="Tabs 接受selected props" time="0.01" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Tabs"/>
   <testcase name="Toast 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast"/>
-  <testcase name="Toast props 接收autoClose" time="1.531" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
-  <testcase name="Toast props 接收closeButton" time="1.014" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
-  <testcase name="Toast props 接收enableHtml" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
-  <testcase name="Toast props 接收position" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收autoClose" time="1.503" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收closeButton" time="1.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收enableHtml" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收position" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
   <system-out>
-    <![CDATA[HeadlessChrome 79.0.3945 (Windows 10.0.0) LOG: Object{line: <div data-v-453b41="" class="line"></div>, toast: <div data-v-453b41="" class="toast"><div data-v-453b41="" class="message"><div data-v-453b41=""><strong id="test">hi</strong></div></div> <div data-v-453b41="" class="line"></div> <span data-v-453b41="" class="close">
-      关闭
-    </span></div>}
-,HeadlessChrome 79.0.3945 (Windows 10.0.0) LOG: <div data-v-453b41="" class="line"></div>
-,HeadlessChrome 79.0.3945 (Windows 10.0.0) LOG: Object{line: <div data-v-453b41="" class="line"></div>, toast: <div data-v-453b41="" class="toast"><div data-v-453b41="" class="message"></div> <div data-v-453b41="" class="line"></div> <span data-v-453b41="" class="close">
-      关闭
-    </span></div>}
-,HeadlessChrome 79.0.3945 (Windows 10.0.0) LOG: <div data-v-453b41="" class="line"></div>
-,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "pc".
+    <![CDATA[HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "pc".
 
 (found in <Root>)'
 ,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "ipad".
@@ -49,6 +46,15 @@
 
 (found in <Root>)'
 ,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "widePc".
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Injection "eventBus" not found
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Injection "eventBus" not found
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Missing required prop: "name"
 
 (found in <Root>)'
 
