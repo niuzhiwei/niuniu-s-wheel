@@ -17,30 +17,34 @@ export default {
 
   mounted() {
     this.eventBus.$on("update:selected", (item, vm) => {
-      this.$nextTick(() => {
-        let { width, height, top, left } = vm.$el.getBoundingClientRect();
-        this.$refs.line.style.width = width + "px";
-        this.$refs.line.style.left = left + "px";
-      });
+      let { width, height, top, left } = vm.$el.getBoundingClientRect();
+      this.$refs.line.style.width = width + "px";
+      this.$refs.line.style.left = left + "px";
     });
   }
 };
 </script>
 <style lang="scss" scoped>
 $tab-height: 40px;
+$border-color: #ddd;
 .tabs-head {
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
   position: relative;
+  border: 1px solid $border-color;
   > .line {
     position: absolute;
     bottom: 0;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid blue;
     transition: all 350ms;
   }
   > .actions-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
+    padding: 0 1em;
   }
 }
 </style>
