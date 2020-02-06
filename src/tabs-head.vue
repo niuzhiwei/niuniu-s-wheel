@@ -14,10 +14,14 @@
 export default {
   name: "GuluTabsHead",
   inject: ["eventBus"],
-  created() {
+
+  mounted() {
     this.eventBus.$on("update:selected", (item, vm) => {
-      console.log(item);
-      console.log(vm);
+      this.$nextTick(() => {
+        let { width, height, top, left } = vm.$el.getBoundingClientRect();
+        this.$refs.line.style.width = width + "px";
+        this.$refs.line.style.left = left + "px";
+      });
     });
   }
 };
@@ -33,7 +37,7 @@ $tab-height: 40px;
     position: absolute;
     bottom: 0;
     border-bottom: 1px solid red;
-    width: 100px;
+    transition: all 350ms;
   }
   > .actions-wrapper {
     margin-left: auto;
