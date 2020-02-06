@@ -1,32 +1,57 @@
 <?xml version="1.0"?>
-<testsuite name="HeadlessChrome 79.0.3945 (Windows 10.0.0)" package="" timestamp="2020-02-05T03:38:41" id="0" hostname="LAPTOP-8IQGIGE7" tests="22" errors="0" failures="0" time="0.057">
+<testsuite name="HeadlessChrome 79.0.3945 (Windows 10.0.0)" package="" timestamp="2020-02-06T02:18:40" id="0" hostname="LAPTOP-8IQGIGE7" tests="27" errors="0" failures="0" time="1.616">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/79.0.3945.130 Safari/537.36"/>
   </properties>
   <testcase name="Button 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button 可以设置icon." time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button 可以设置icon." time="0.008" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
   <testcase name="Button 可以设置loading." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button icon默认order是1." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button 可以设置position." time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
-  <testcase name="Button 点击button触发click事件." time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button icon默认order是1." time="0.005" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button 可以设置position." time="0.003" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
+  <testcase name="Button 点击button触发click事件." time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Button"/>
   <testcase name="Col 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col"/>
-  <testcase name="Col props 接收span" time="0.022" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
-  <testcase name="Col props 接收offset" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收span" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收offset" time="0.003" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收pc" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
   <testcase name="Col props 接收pc" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
-  <testcase name="Col props 接收pc" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
-  <testcase name="Col props 接收narrowPc" time="0.009" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
-  <testcase name="Col props 接收widePc" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收narrowPc" time="0.004" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
+  <testcase name="Col props 接收widePc" time="0.005" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Col props"/>
   <testcase name="Input 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input"/>
   <testcase name="Input props 接收value" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
   <testcase name="Input props 接收disabled" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
   <testcase name="Input props 接收readonly" time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
-  <testcase name="Input props 接收error" time="0.003" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
-  <testcase name="Input 事件 支持change/input/focus/blur事件" time="0.002" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input 事件"/>
+  <testcase name="Input props 接收error" time="0.009" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input props"/>
+  <testcase name="Input 事件 支持change/input/focus/blur事件" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Input 事件"/>
   <testcase name="Row 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row"/>
-  <testcase name="Row props 接收gutter" time="0.008" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
+  <testcase name="Row props 接收gutter" time="0.039" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
   <testcase name="Row props 接收align" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Row props"/>
+  <testcase name="Toast 存在." time="0" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast"/>
+  <testcase name="Toast props 接收autoClose" time="1.522" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收closeButton" time="0.006" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收enableHtml" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
+  <testcase name="Toast props 接收position" time="0.001" classname="HeadlessChrome_79_0_3945_(Windows_10_0_0).Toast props"/>
   <system-out>
-    <![CDATA[
+    <![CDATA[HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "pc".
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "ipad".
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "narrowPc".
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Invalid prop: custom validator check failed for prop "widePc".
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: '[Vue warn]: Error in nextTick: "TypeError: Cannot read property 'style' of undefined"
+
+(found in <Root>)'
+,HeadlessChrome 79.0.3945 (Windows 10.0.0) ERROR: TypeError: Cannot read property 'style' of undefined
+TypeError: Cannot read property 'style' of undefined
+    at VueComponent.<anonymous> (http://localhost:9876/base/dist/toast.test.js?b3194f016123f9660813e0222adbceb1a2e7ff80:12505:27)
+    at Array.<anonymous> (http://localhost:9876/base/dist/toast.test.js?b3194f016123f9660813e0222adbceb1a2e7ff80:2092:12)
+    at flushCallbacks (http://localhost:9876/base/dist/toast.test.js?b3194f016123f9660813e0222adbceb1a2e7ff80:2018:14)
+
 ]]>
   </system-out>
   <system-err/>
