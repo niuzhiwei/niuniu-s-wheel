@@ -40,7 +40,7 @@ export default {
       if (
         this.$refs.popover &&
         (this.$refs.popover === e.target ||
-          this.$refs.popover.contains(e.target))
+          this.$refs.contentWrapper.contains(e.target))
       ) {
         return;
       }
