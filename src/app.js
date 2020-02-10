@@ -48,7 +48,7 @@ new Vue({
     loading1: false,
     loading2: true,
     message: '测试input',
-    selectedTab: 'sports'
+    selectedTab: '2'
   },
   methods: {
     inputChange(e) {
