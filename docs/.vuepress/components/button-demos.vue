@@ -4,11 +4,7 @@
     <g-button icon='setting'>默认按钮</g-button>
     <g-button :loading='true'>默认按钮</g-button>
     <g-button :disabled='true'>默认按钮</g-button>
-    <pre>
-      <code>
-          {{content}}
-      </code>
-  </pre>
+    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 <script>
@@ -20,11 +16,11 @@ export default {
   data() {
     return {
       content: `
-           <g-button>默认按钮</g-button>
-    <g-button icon='setting'>默认按钮</g-button>
-    <g-button :loading='true'>默认按钮</g-button>
-    <g-button :disabled='true'>默认按钮</g-button>
-          `
+<g-button>默认按钮</g-button>
+<g-button icon='setting'>默认按钮</g-button>
+<g-button :loading='true'>默认按钮</g-button>
+<g-button :disabled='true'>默认按钮</g-button>
+          `.trim()
     };
   }
 };
