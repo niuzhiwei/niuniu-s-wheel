@@ -46,13 +46,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$height: 32px;
-$border-color: #999;
-$border-color-hover: #666;
-$border-radius: 4px;
-$font-size: 12px;
-$box-shadow-color: rgba(0, 0, 0, 0.5);
-$red: #f1453d;
+@import "var";
 .wrapper {
   font-size: $font-size;
   display: inline-flex;
@@ -61,7 +55,7 @@ $red: #f1453d;
     margin-right: 0.5em;
   }
   > input {
-    height: $height;
+    height: $input-height;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     padding: 0 8px;
