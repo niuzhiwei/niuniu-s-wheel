@@ -49,7 +49,34 @@ new Vue({
     loading1: false,
     loading2: true,
     message: '测试input',
-    selectedTab: ['1', '2']
+    selectedTab: ['1', '2'],
+    source: [
+      {
+        name: '浙江',
+        children: [
+          {
+            name: '杭州',
+            children: [
+              { name: '上城' },
+              { name: '下城' },
+              { name: '江干' },
+              { name: '拱墅' },
+              { name: '西湖' },
+              { name: '滨江' },
+              { name: '萧山' }
+            ]
+          },
+          { name: '温州', children: [{ name: '南湖' }, { name: '秀洲' }, { name: '嘉善' }] }
+          // { name: '宁波' },
+          // { name: '嘉兴' },
+          // { name: '湖州' }
+        ]
+      },
+      {
+        name: '福建',
+        children: [{ name: '福州', children: [{ name: '鼓楼' }, { name: '台江' }, { name: '苍山' }] }]
+      }
+    ]
   },
   methods: {
     inputChange(e) {
