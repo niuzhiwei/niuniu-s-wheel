@@ -7,10 +7,14 @@
       <slot> </slot>
     </div>
     <div
-      class="popover"
+      class="popover-wrapper"
       v-if="popoverVisible"
     >
-      <cascader-items :items='source'></cascader-items>
+      <cascader-items
+        :items='source'
+        class="popover"
+        :height="popoverHeight"
+      ></cascader-items>
     </div>
   </div>
 </template>
@@ -22,11 +26,14 @@ export default {
   props: {
     source: {
       type: Array
+    },
+    popoverHeight: {
+      type: String
     }
   },
   data() {
     return {
-      popoverVisible: false
+      popoverVisible: true
     };
   }
 };
@@ -34,14 +41,19 @@ export default {
 <style lang="scss" scoped>
 @import "var";
 .cascader {
+  position: relative;
   .trigger {
-    border: 1px solid red;
     height: 32px;
     width: 100px;
+    border: 1px solid black;
   }
-  .popover {
-    border: 1px solid green;
-    height: 200px;
+  .popover-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    display: flex;
+    @extend .box-shadow;
   }
 }
 </style>
