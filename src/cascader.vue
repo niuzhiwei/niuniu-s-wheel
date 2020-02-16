@@ -4,7 +4,7 @@
       class="trigger"
       @click="popoverVisible = !popoverVisible"
     >
-      <slot> </slot>
+      {{result}}
     </div>
     <div
       class="popover-wrapper"
@@ -44,6 +44,11 @@ export default {
       popoverVisible: true
     };
   },
+  computed: {
+    result() {
+      return this.selected.map(item => item.name).join("/");
+    }
+  },
   methods: {
     onUpdateSelected(newSelected) {
       this.$emit("update:selected", newSelected);
@@ -56,9 +61,14 @@ export default {
 .cascader {
   position: relative;
   .trigger {
-    height: 32px;
-    width: 100px;
-    border: 1px solid black;
+    height: $input-height;
+    line-height: $input-height;
+    min-width: 10em;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1em;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
   }
   .popover-wrapper {
     position: absolute;
@@ -66,6 +76,7 @@ export default {
     left: 0;
     background: white;
     display: flex;
+    margin-top: 8px;
     @extend .box-shadow;
   }
 }

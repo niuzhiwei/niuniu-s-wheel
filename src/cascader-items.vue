@@ -3,7 +3,6 @@
     class="cascaderItems"
     :style="{ height: height }"
   >
-    <div>selected:{{ selected&& selected[level] && selected[level].name }} level:{{ level }}</div>
     <div class="left">
       <div
         class="label"
