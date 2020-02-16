@@ -3,13 +3,19 @@
     <g-cascader
       :source="source"
       popover-height="200px"
-      :selected="selected"
-      @update:selected="selected = $event"
+      :selected.sync="selected"
     ></g-cascader>
   </div>
 </template>
 <script>
 import Cascader from "./cascader";
+import db from "./db";
+
+function ajax(parent_id = 0) {
+  return db.filter(item => item.parent_id == parent_id);
+}
+console.log(ajax());
+
 export default {
   name: "demo",
   components: {
@@ -18,41 +24,39 @@ export default {
   data() {
     return {
       selected: [],
-      source: [
-        {
-          name: "浙江",
-          children: [
-            {
-              name: "杭州",
-              children: [
-                { name: "上城" },
-                { name: "下城" },
-                { name: "江干" },
-                { name: "拱墅" },
-                { name: "西湖" },
-                { name: "滨江" },
-                { name: "萧山" }
-              ]
-            },
-            {
-              name: "温州",
-              children: [{ name: "南湖" }, { name: "秀洲" }, { name: "嘉善" }]
-            }
-            // { name: '宁波' },
-            // { name: '嘉兴' },
-            // { name: '湖州' }
-          ]
-        },
-        {
-          name: "福建",
-          children: [
-            {
-              name: "福州",
-              children: [{ name: "鼓楼" }, { name: "台江" }, { name: "苍山" }]
-            }
-          ]
-        }
-      ]
+      source: ajax()
+      //   source: [
+      //     {
+      //       name: "浙江",
+      //       children: [
+      //         {
+      //           name: "杭州",
+      //           children: [
+      //             { name: "上城" },
+      //             { name: "下城" },
+      //             { name: "江干" },
+      //             { name: "拱墅" },
+      //             { name: "西湖" },
+      //             { name: "滨江" },
+      //             { name: "萧山" }
+      //           ]
+      //         },
+      //         {
+      //           name: "温州",
+      //           children: [{ name: "南湖" }, { name: "秀洲" }, { name: "嘉善" }]
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       name: "福建",
+      //       children: [
+      //         {
+      //           name: "福州",
+      //           children: [{ name: "鼓楼" }, { name: "台江" }, { name: "苍山" }]
+      //         }
+      //       ]
+      //     }
+      //   ]
     };
   }
 };
