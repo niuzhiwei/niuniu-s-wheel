@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="col"
-    :class="colClass"
-    :style="colStyle"
-  >
+  <div class="col" :class="colClass" :style="colStyle">
     <slot></slot>
   </div>
 </template>

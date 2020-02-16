@@ -40,7 +40,7 @@ export default {
     },
     selectTab() {
       this.$children.forEach(vm => {
-        if ((vm.$options.name = "GuluTabsHead")) {
+        if (vm.$options.name === "GuluTabsHead") {
           vm.$children.forEach(item => {
             if (
               item.$options.name === "GuluTabsItem" &&
@@ -59,5 +59,4 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

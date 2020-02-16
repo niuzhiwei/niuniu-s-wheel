@@ -1,11 +1,6 @@
 <template>
-  <div
-    class="row"
-    :style="rowStyle"
-    :class='rowClass'
-  >
-    <slot>
-    </slot>
+  <div class="row" :style="rowStyle" :class="rowClass">
+    <slot> </slot>
   </div>
 </template>
 <script>

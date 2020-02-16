@@ -1,24 +1,18 @@
 <template>
-  <div
-    class="wrapper"
-    :class="{error}"
-  >
+  <div class="wrapper" :class="{ error }">
     <input
       :value="value"
       type="text"
-      :disabled='disabled'
-      :readonly='readonly'
-      @change="$emit('change',$event.target.value)"
-      @input="$emit('input',$event.target.value)"
-      @focus="$emit('focus',$event.target.value)"
-      @blur="$emit('blur',$event.target.value)"
-    >
+      :disabled="disabled"
+      :readonly="readonly"
+      @change="$emit('change', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
+    />
     <template v-if="error">
-      <icon
-        name='error'
-        class='icon-error'
-      ></icon>
-      <span class='errorMessage'>{{error}}</span>
+      <icon name="error" class="icon-error"></icon>
+      <span class="errorMessage">{{ error }}</span>
     </template>
   </div>
 </template>

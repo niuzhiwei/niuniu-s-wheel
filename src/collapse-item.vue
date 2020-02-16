@@ -1,13 +1,7 @@
 <template>
   <div class="collapseItem">
-    <div
-      class="title"
-      @click="toggle"
-    >{{title}}</div>
-    <div
-      class="content"
-      v-if="open"
-    >
+    <div class="title" @click="toggle">{{ title }}</div>
+    <div class="content" v-if="open">
       <slot></slot>
     </div>
   </div>

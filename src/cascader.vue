@@ -1,17 +1,11 @@
 <template>
   <div class="cascader">
-    <div
-      class="trigger"
-      @click="popoverVisible = !popoverVisible"
-    >
+    <div class="trigger" @click="popoverVisible = !popoverVisible">
       <slot> </slot>
     </div>
-    <div
-      class="popover-wrapper"
-      v-if="popoverVisible"
-    >
+    <div class="popover-wrapper" v-if="popoverVisible">
       <cascader-items
-        :items='source'
+        :items="source"
         class="popover"
         :height="popoverHeight"
       ></cascader-items>

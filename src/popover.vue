@@ -1,20 +1,14 @@
 <template>
-  <div
-    class="popover"
-    ref='popover'
-  >
+  <div class="popover" ref="popover">
     <div
-      ref='contentWrapper'
+      ref="contentWrapper"
       class="content-wrapper"
       v-if="visible"
-      :class="{[`position-${position}`]:true}"
+      :class="{ [`position-${position}`]: true }"
     >
-      <slot name='content'></slot>
+      <slot name="content"></slot>
     </div>
-    <span
-      ref="tirggerWrapper"
-      style="display:inline-block"
-    >
+    <span ref="tirggerWrapper" style="display:inline-block">
       <slot></slot>
     </span>
   </div>
