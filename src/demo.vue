@@ -4,6 +4,7 @@
       :source="source"
       popover-height="200px"
       :selected.sync="selected"
+      @update:selected="xxx"
     ></g-cascader>
   </div>
 </template>
@@ -11,10 +12,14 @@
 import Cascader from "./cascader";
 import db from "./db";
 
-function ajax(parent_id = 0) {
-  return db.filter(item => item.parent_id == parent_id);
+function ajax(parentId = 0) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      let result = db.filter(item => item.parent_id == parentId);
+      resolve(result);
+    }, 2000);
+  });
 }
-console.log(ajax());
 
 export default {
   name: "demo",
@@ -24,7 +29,7 @@ export default {
   data() {
     return {
       selected: [],
-      source: ajax()
+      source: []
       //   source: [
       //     {
       //       name: "浙江",
@@ -58,6 +63,21 @@ export default {
       //     }
       //   ]
     };
+  },
+  created() {
+    ajax(0).then(result => {
+      this.source = result;
+    });
+  },
+  methods: {
+    xxx() {
+      ajax(this.selected[0].id).then(result => {
+        let lastLevelSelected = this.source.filter(
+          item => item.id == this.selected[0].id
+        )[0];
+        this.$set(lastLevelSelected, "children", result);
+      });
+    }
   }
 };
 </script>
