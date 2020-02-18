@@ -4,7 +4,7 @@
       :source="source"
       popover-height="200px"
       :selected.sync="selected"
-      @update:selected="xxx"
+      :load-data="loadData"
     ></g-cascader>
   </div>
 </template>
@@ -13,10 +13,10 @@ import Cascader from "./cascader";
 import db from "./db";
 
 function ajax(parentId = 0) {
-  return new Promise(resolve => {
+  return new Promise(success => {
     setTimeout(() => {
       let result = db.filter(item => item.parent_id == parentId);
-      resolve(result);
+      success(result);
     }, 2000);
   });
 }
@@ -70,6 +70,12 @@ export default {
     });
   },
   methods: {
+    loadData(item, updateSource) {
+      let { id } = item;
+      ajax(id).then(result => {
+        updateSource(result);
+      });
+    },
     xxx() {
       ajax(this.selected[0].id).then(result => {
         let lastLevelSelected = this.source.filter(

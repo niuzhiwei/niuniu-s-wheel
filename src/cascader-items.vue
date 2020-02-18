@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="cascaderItems"
-    :style="{ height: height }"
-  >
+  <div class="cascaderItems" :style="{ height: height }">
     <div class="left">
       <div
         class="label"
@@ -11,17 +8,10 @@
         @click="onClickLabel(item)"
       >
         {{ item.name }}
-        <icon
-          class="icon"
-          v-if="item.children"
-          name="right"
-        ></icon>
+        <icon class="icon" v-if="item.children" name="right"></icon>
       </div>
     </div>
-    <div
-      class="right"
-      v-if="rightItems"
-    >
+    <div class="right" v-if="rightItems">
       <gulu-cascader-items
         :items="rightItems"
         :height="height"

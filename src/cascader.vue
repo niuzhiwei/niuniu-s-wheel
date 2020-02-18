@@ -4,7 +4,7 @@
       class="trigger"
       @click="popoverVisible = !popoverVisible"
     >
-      {{result}}
+      {{ result }}
     </div>
     <div
       class="popover-wrapper"
@@ -37,6 +37,9 @@ export default {
       default: () => {
         return [];
       }
+    },
+    loadData: {
+      type: Function
     }
   },
   data() {
@@ -52,6 +55,12 @@ export default {
   methods: {
     onUpdateSelected(newSelected) {
       this.$emit("update:selected", newSelected);
+      let lastItem = newSelected[newSelected.length - 1];
+      let updateSource = result => {
+        let toUpdate = this.source.filter(item => item.id === lastItem.id)[0];
+        this.$set(toUpdate, "children", result);
+      };
+      this.loadData(lastItem, updateSource); //回调
     }
   }
 };
